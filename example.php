@@ -8,6 +8,7 @@
 
 	// Some form of security is recommended to prevent webhook abuse.
 	// Discord relies on the token being secret, so this should be enough for us.
+	// (We are on https enabled server, right?)
 	if (!isset($_GET['secret']) || $_GET['secret'] !== $webhook_token)
 		exit();
 
