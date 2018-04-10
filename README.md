@@ -1,7 +1,7 @@
 
-This a converter proxy for Discord webhooks. 
+This a converter proxy for Discord webhooks for PHP. 
 
-Discord only supports GitHub and Slack webhooks out of the box, so I figured I'd make this support more.
+Discord only supports GitHub and Slack webhooks out of the box, so I figured I'd make this to support more.
 
 ### Supported services ###
 * Bitbucket
