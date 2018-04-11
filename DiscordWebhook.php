@@ -27,10 +27,15 @@ class DiscordWebhook {
 		}
 	}
 
+	public function hasService($service) {
+
+		return isset($this->services[$service]);
+	}
+
 	// Calls a registered member function with $data as it's parameter
 	public function serviceConvert($service, $data) {
 
-		if (!isset($this->services[$service]))
+		if (!$this->hasService($service))
 			throw new DiscordWebhookException("DiscordWebhook invalid service: {$service}");
 
 		return call_user_func_array( array(get_class(), $this->services[$service]), [$data]);

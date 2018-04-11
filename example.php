@@ -14,8 +14,16 @@
 
 	$webhook = new DiscordWebhook($webhook_id, $webhook_token);
 
+	// Verify we can support the requested service eg. Bitbucket
+	// By using $_GET param we can support any number of service types with this single file.
+	// If you need only one service such as Bitbucket, you may skip this 
+	// and hardcode 'Bitbucket' as proxy() parameter.
+	$service = isset($_GET['service']) ? $_GET['service'] : 'Bitbucket';
+	if (!$webhook->hasService($service))
+		exit("Specified service not supported");
+
 	try {
-		$webhook->proxy('Bitbucket');
+		$webhook->proxy($service);
 	}
 	catch (DiscordWebhookException $e) {
 
