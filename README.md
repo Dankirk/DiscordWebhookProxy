@@ -18,6 +18,12 @@ The core usage can be squeezed into two simple calls.
 	$webhook->proxy('Bitbucket');
 ```
 
+### Running example.php ###
+1. Create webhook on Discord. Take note on webhooks id and token (they are part of the url)
+2. Deploy this package to your webserver and put Discord' webhook id and token into example.php
+3. On Bitbucket create webhook pointing to https://myserver.com/example.php?secret=my_discord_webhook_token
+4. Try pushing something to the Bitbucket repository and see if it gets printed on Discord. Check your error logs if not.
+
 ### Extending ###
 
 DiscordWebhook class automatically recognizes member functions starting with "convertFrom", 
