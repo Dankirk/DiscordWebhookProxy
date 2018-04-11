@@ -24,6 +24,11 @@ The core usage can be squeezed into two simple calls.
 3. On Bitbucket create webhook pointing to https://myserver.com/example.php?secret=my_discord_webhook_token
 4. Try pushing something to the Bitbucket repository and see if it gets printed on Discord. Check your error logs if not.
 
+
+Output should look something like this
+
+![Alt text](DiscordWebhook.PNG?raw=true "Example output")
+
 ### Extending ###
 
 DiscordWebhook class automatically recognizes member functions starting with "convertFrom", 
