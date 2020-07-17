@@ -56,7 +56,7 @@ class DiscordWebhook {
 		$user = [
 			"name" => $data['actor']['display_name'],
 			"icon_url" => $data['actor']['links']['avatar']['href'],
-			"url" => $base_link . $data['actor']['username']
+			"url" => $base_link . $data['actor']['uuid']
 		];
 
 		foreach ($data['push']['changes'] as $i => $change) {
