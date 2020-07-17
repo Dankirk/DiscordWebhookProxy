@@ -3,7 +3,7 @@
 class DiscordWebhookException extends \Exception { }
 class DiscordWebhook {
 
-	const DISCORD_BASE_URL = "https://discordapp.com/api/";
+	const DISCORD_BASE_URL = "https://discord.com/api/";
 
 	protected $webhook_id, $webhook_token;
 	protected $services = [];
